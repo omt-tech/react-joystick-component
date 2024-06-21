@@ -22,6 +22,7 @@ export interface IJoystickProps {
     controlPlaneShape?: JoystickShape;
     minDistance?: number;
     pos?: {x: number, y: number};
+    type?: "button" | "submit";
 }
 
 
@@ -407,6 +408,7 @@ class Joystick extends React.Component<IJoystickProps, IJoystickState> {
         this._radius = this._baseSize / 2;
         const baseStyle = this._getBaseStyle();
         const stickStyle = this._getStickStyle();
+        const buttonType = this.props.type || "button";
         //@ts-ignore
         return (
             <div data-testid="joystick-base" className={this.props.disabled ? 'joystick-base-disabled' : ''}
@@ -417,7 +419,8 @@ class Joystick extends React.Component<IJoystickProps, IJoystickState> {
                         disabled={this.props.disabled}
                         onPointerDown={(event: any) => this._pointerDown(event)}
                         className={this.props.disabled ? 'joystick-disabled' : ''}
-                        style={stickStyle}/>
+                        style={stickStyle}
+                        type={buttonType}/>
             </div>
         )
     }
