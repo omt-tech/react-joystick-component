@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "lint": "tslint -c tslint.json 'src/**/*.tsx' --fix && eslint src/**/*.tsx --fix --ext .ts"
   },
-  "repository": "https://github.com/elmarti/react-joystick-component",
+  "repository": "https://github.com/omt-tech/react-joystick-component",
   "author": "elmarti elmarti.tech@gmail.com",
   "license": "MIT",
   "devDependencies": {
