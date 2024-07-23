@@ -356,7 +356,7 @@ class Joystick extends React.Component<IJoystickProps, IJoystickState> {
             alignItems: 'center',
         } as any;
         if (this.props.baseImage) {
-            padStyle.background = `url(${this.props.baseImage})`;
+            padStyle.backgroundImage = `url(${this.props.baseImage})`;
             padStyle.backgroundSize = '100%'
         }
         return padStyle;
@@ -382,7 +382,7 @@ class Joystick extends React.Component<IJoystickProps, IJoystickState> {
             touchAction: 'none'
         } as any;
         if (this.props.stickImage) {
-            stickStyle.background = `url(${this.props.stickImage})`;
+            stickStyle.backgroundImage = `url(${this.props.stickImage})`;
             stickStyle.backgroundSize = '100%'
         }
         if(this.props.pos){
@@ -408,7 +408,7 @@ class Joystick extends React.Component<IJoystickProps, IJoystickState> {
         this._radius = this._baseSize / 2;
         const baseStyle = this._getBaseStyle();
         const stickStyle = this._getStickStyle();
-        const buttonType = this.props.type || "button";
+        const buttonType = this.props.type || 'button';
         //@ts-ignore
         return (
             <div data-testid="joystick-base" className={this.props.disabled ? 'joystick-base-disabled' : ''}
