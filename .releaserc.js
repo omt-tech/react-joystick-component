@@ -45,7 +45,6 @@ module.exports = {
         }
         ],
         '@semantic-release/github',
-        '@semantic-release/npm'
     ],
     tagFormat: '${version}',
 
